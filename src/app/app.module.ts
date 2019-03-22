@@ -4,25 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatBottomSheetModule, MatButtonModule } from '@angular/material';
-import { MySheetComponent } from './components/my-sheet/my-sheet.component';
+import { MatBottomSheetModule, MatButtonModule, MatListModule, MatIconModule} from '@angular/material';
+import { MySheetComponent , BottomSheetOverviewExampleSheet} from './components/my-sheet/my-sheet.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MySheetComponent
+    MySheetComponent,
+    BottomSheetOverviewExampleSheet,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatBottomSheetModule,
-    
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
-  entryComponents: [MySheetComponent],
+  entryComponents: [MySheetComponent, BottomSheetOverviewExampleSheet],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

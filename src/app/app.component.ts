@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatBottomSheet } from '@angular/material';
-import { MySheetComponent } from './components/my-sheet/my-sheet.component';
+import { MySheetComponent, BottomSheetOverviewExampleSheet } from './components/my-sheet/my-sheet.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
 
   }
   openBottomSheet(){
-    this.bottomSheet.open(MySheetComponent);
+    this.bottomSheet.open(BottomSheetOverviewExampleSheet);
   }
 
 }
