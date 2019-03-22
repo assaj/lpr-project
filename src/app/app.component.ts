@@ -15,7 +15,7 @@ export class AppComponent {
   }
   openBottomSheet(){
     this.bottomSheet.open(MySheetComponent);
-}
+  }
 
 }
 
