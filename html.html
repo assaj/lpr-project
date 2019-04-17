@@ -4,7 +4,7 @@
   <title>LPR-UFPE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -125,7 +125,7 @@ collapse button is not working
 <div style="position: fixed;
             bottom: -4px;
             right: 50px;">
-    <button id="chat" style="
+    <button id="chatButton" style="
                         background-color : yellow;
                         color: black;
                         padding: 10px 20px;
@@ -139,11 +139,34 @@ collapse button is not working
                             bottom: -4px;
                             background-color: yellow;
                             padding: 20px;
-                            right: 500px;">
+                            right: 20%;
+                            z-index: 10;">
         <label for="exampleInputEmail1">LPR-CHAT</label>
-        <input class="form-control pt-5" type="text" readonly>
-        <input class="form-control pt-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite Aqui">
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="d-inline-block time-right" style="width: 75%">
+          Entre em contato também via: 
+          <button class="btn btn-primary" >Whatsapp</button>
+          <button class="btn btn-primary">SMS</button>
+        </div>
+        <div id="chat">
+        <div class="container" style="width: 86%">
+            <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Avatar" style="width:100%;">
+            <p>Gostaria de saber como posso acessar meu relatórios dos dosimetros do mês atual</p>
+            <span class="time-right" style="color: black">11:00</span>
+          </div>
+          
+          <div class="container darker" style="width: 86%">
+            <img src="http://www.linktapinformatica.com.br/img/icones/incone%20atendente.jpg" alt="Avatar" style="width:100%;">
+            <p>Certo, basta seguir essa sequencia de passos....</p>
+            <span class="time-right" style="color: black">11:05</span>
+          </div>
+          </div>
+        <div class="d-inline-block" style="width: 75%">
+            <input class="form-control" id="inputMessage" aria-describedby="emailHelp" placeholder="Digite Aqui">
+          </div>
+          <div class="d-inline-block">
+              <button id="sendMessage"  class="btn btn-primary pt-2">Enviar</button>
+          </div>
+          
     </form>
 <footer class="page-footer font-small blue pt-4 bg-primary">
 
@@ -212,12 +235,5 @@ collapse button is not working
     </div>
 
   </footer>
-  <script>
-      $("#form").toggle();
-    $(document).ready(function(){
-        $("#chat").click(function(){
-            $("#form").toggle();
-        });
-    }); 
-</script>
+  <script src="script.js"></script>
 </html>

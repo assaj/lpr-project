@@ -1,50 +1,50 @@
-html{
-  font-family:helvetica, sans-serif;
-  max-width:500px;
-  margin:auto;
-  color:#666666;
+
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-form{
-  padding:10px;
-  border:2px solid #3498db;
-  background:#F0F8FF;
-  border-radius:15px;
-  display:none;
-
+/* Darker chat container */
+.darker { 
+  border-color: #ccc;
+  background-color: rgb(184, 182, 182);
 }
 
-#formButton{
-  border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  background: #3498db;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-  margin:20px;
- 
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-#formButton:hover{
-  background: #3cb0fd;
-  text-decoration: none;
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
 }
 
-b{
-  color:#3498db;
-}
-#submit{
-  border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 15px;
-  background: #3498db;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
 }
 
-#submit:hover{
-  background: #3cb0fd;
-  text-decoration: none;
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
 }
