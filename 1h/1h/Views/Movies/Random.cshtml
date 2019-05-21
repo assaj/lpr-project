@@ -1,0 +1,28 @@
+﻿@model  _1h.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+}
+
+<script src="~/Scripts/ajax.js"></script>
+
+<h2>@Model.Movie.Name</h2>
+
+<input type="text" class="form-control" id="custumerInput" placeholder="Custumer Name">
+
+<button onclick="gravar()" type="submit" class="mb-2 btn btn-outline-light">Enviar</button>
+
+@*
+
+    @if (Model.custumers.Count == 0)
+    {
+        <h2>Empty List</h2>
+    }
+    else
+    {
+        @Html.Partial("_List")
+    }
+
+*@
+
+<div id="put"></div>
+
