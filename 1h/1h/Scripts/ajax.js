@@ -1,19 +1,18 @@
 ﻿function gravar()
 {
     $.ajax({
-        type: "POST",
-        url: "Movies/GravarJson",
-        data: {
-            nome: $('#custumerInput').val()
-        },
+        type: "GET",
+        url: "Movies/Buscar",
         dataType: "json",
+        contentType: "application/json",
         success: function (ans) {
-            //alert(ans.Name);
-            $('#put').append('<h3>')
+            console.log(ans)
+            //$('#put').append('<h3>')
             $('#put').append(ans.Name)
-            $('#put').append('</h3>')
+            //$('#put').append('</h3>')
         },
         error: function (ans) {
+            console.log(ans)
             alert('Error');
         }
     });
