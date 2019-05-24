@@ -6,10 +6,13 @@
         dataType: "json",
         contentType: "application/json",
         success: function (ans) {
+
+            for (var a = 0; a < 3; a++) {
+                $('#put').append('<h3>')
+                $('#put').append(ans[a].CPF)
+                $('#put').append('</h3>')
+            }
             console.log(ans)
-            //$('#put').append('<h3>')
-            $('#put').append(ans.Name)
-            //$('#put').append('</h3>')
         },
         error: function (ans) {
             console.log(ans)
